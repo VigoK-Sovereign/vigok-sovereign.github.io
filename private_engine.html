@@ -1,3 +1,44 @@
+<!-- 頂端控制列：同一頁切換功能 -->
+<div style="display: flex; justify: center; gap: 10px; margin: 15px 0;">
+  <button id="btn-work" onclick="switchMode('work')" style="padding: 10px 20px; background: #00f3ff; color: #000; font-weight: bold; border: none; cursor: pointer; border-radius: 4px;">
+    ⚙️ 私人完整力線工具 (Audit Workstation)
+  </button>
+  <button id="btn-present" onclick="switchMode('present')" style="padding: 10px 20px; background: #101826; color: #00f3ff; border: 1px solid #00f3ff; font-weight: bold; cursor: pointer; border-radius: 4px;">
+    ✨ 客戶震撼展演視角 (Client Showcase)
+  </button>
+</div>
+
+<!-- 模式一：私人操作介面 (預設顯示) -->
+<div id="view-workstate">
+  <!-- 此處放置您原有的完整上傳、點位標記與幾何畫線功能區塊 -->
+</div>
+
+<!-- 模式二：高質感展演視角 (預設隱藏) -->
+<div id="view-present" style="display: none;">
+  <!-- 此處放置具備純粹視覺衝擊、炫光 HUD 網格與展示標語的極致展演 Canvas -->
+</div>
+
+<script>
+  function switchMode(mode) {
+    const workView = document.getElementById('view-workstate');
+    const presentView = document.getElementById('view-present');
+    const btnWork = document.getElementById('btn-work');
+    const btnPresent = document.getElementById('btn-present');
+
+    if (mode === 'work') {
+      workView.style.display = 'block';
+      presentView.style.display = 'none';
+      btnWork.style.background = '#00f3ff'; btnWork.style.color = '#000';
+      btnPresent.style.background = '#101826'; btnPresent.style.color = '#00f3ff';
+    } else {
+      workView.style.display = 'none';
+      presentView.style.display = 'block';
+      btnPresent.style.background = '#00f3ff'; btnPresent.style.color = '#000';
+      btnWork.style.background = '#101826'; btnWork.style.color = '#00f3ff';
+    }
+  }
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
