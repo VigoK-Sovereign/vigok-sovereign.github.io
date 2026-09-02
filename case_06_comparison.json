@@ -1,0 +1,10 @@
+{
+  "image": "IMG_3871.jpeg",
+  "metrics": {
+    "external_load": "180 kg",
+    "grf": "3,050 N",
+    "moment_ratio": "1.12 (Balanced)",
+    "shear_stress": "OPTIMIZED (Low)",
+    "status": "PASS / KINEMATICALLY STABLE"
+  }
+}
