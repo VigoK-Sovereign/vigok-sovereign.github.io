@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "case_id": "CASE_2026_SQUAT_01",
+    "subject": "Celebrity_Squat_Injury",
+    "exercise_type": "Barbell_Back_Squat",
+    "frame_timestamp": "00:01.42",
+    "image_path": "./input_frames/squat_bottom_keyframe.png"
+  },
+  "canvas_config": {
+    "resolution": [1920, 1080],
+    "dpi": 300,
+    "color_theme": "dark_mode"
+  },
+  "keypoints": [
+    { "id": "ear", "name": "Ear/Head", "xy": [960, 320] },
+    { "id": "c7", "name": "C7 Spine", "xy": [955, 410] },
+    { "id": "l5_s1", "name": "L5/S1 Joint", "xy": [940, 620], "is_vulnerable": true },
+    { "id": "hip", "name": "Hip Joint", "xy": [930, 650] },
+    { "id": "knee", "name": "Knee Joint", "xy": [1120, 710] },
+    { "id": "ankle", "name": "Ankle Joint", "xy": [950, 890] },
+    { "id": "barbell", "name": "Barbell Load Center", "xy": [950, 430] }
+  ],
+  "force_vectors": [
+    { "id": "v_grf", "type": "Ground_Reaction_Force", "origin_keypoint": "ankle", "vector_xy": [0, -350], "color": "#00E5FF", "label": "GRF (3,200 N)" },
+    { "id": "v_load", "type": "Barbell_Load", "origin_keypoint": "barbell", "vector_xy": [0, 420], "color": "#FF3B30", "label": "External Load (180 kg)" }
+  ],
+  "moment_arms": [
+    { "id": "ma_l5s1", "from_keypoint": "l5_s1", "to_line": "v_load", "length_cm": 38.5, "color": "#FF9500", "label": "L5-S1 Moment Arm: 38.5cm" },
+    { "id": "ma_knee", "from_keypoint": "knee", "to_line": "v_load", "length_cm": 22.1, "color": "#34C759", "label": "Knee Moment Arm: 22.1cm" }
+  ]
+}
