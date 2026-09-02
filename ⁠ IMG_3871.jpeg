@@ -4,7 +4,7 @@
     "subject": "Celebrity_Squat_Injury",
     "exercise_type": "Barbell_Back_Squat",
     "frame_timestamp": "00:01.42",
-    "image_path": "./input_frames/squat_bottom_keyframe.png"
+ "image_path": "./IMG_3871.jpeg"
   },
   "canvas_config": {
     "resolution": [1920, 1080],
